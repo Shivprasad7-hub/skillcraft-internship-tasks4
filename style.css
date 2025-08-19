@@ -1,0 +1,113 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #054cf2f4;
+}
+
+.task-input, .controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-input input, .controls input, select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 12px;
+  margin: 8px 0;
+  background: #f1f1f1;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in;
+}
+
+li.completed {
+  text-decoration: line-through;
+  background: #d4edda;
+}
+
+.task-actions button {
+  margin-left: 5px;
+  background: #007bff;
+}
+
+.task-actions button.delete {
+  background: #e74c3c;
+}
+
+.task-actions button.edit {
+  background: #f39c12;
+}
+
+.progress {
+  margin-top: 15px;
+  background: #ddd;
+  border-radius: 8px;
+  height: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  background: #4CAF50;
+  height: 100%;
+  width: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+
+.dark {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.dark .container {
+  background: #2a2a2a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

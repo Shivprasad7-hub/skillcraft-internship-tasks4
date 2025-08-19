@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 To-Do List</h1>
+
+    
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter your task...">
+      <select id="category">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+      </select>
+      <button onclick="addTask()">➕ Add</button>
+    </div>
+
+    
+    <div class="controls">
+      <input type="text" id="search" placeholder="🔍 Search tasks..." onkeyup="searchTasks()">
+      <select id="filter" onchange="filterTasks()">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+      <button onclick="toggleTheme()">🌙/☀️</button>
+    </div>
+
+    
+    <ul id="taskList"></ul>
+
+    
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+    <p id="progressText">0 / 0 tasks completed</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
